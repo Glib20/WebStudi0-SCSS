@@ -1,0 +1,22 @@
+%section-padding {
+  padding: 60px 0;
+
+  @include media-min($bp-desktop) {
+    padding: 94px 0;
+  }
+}
+
+%button {
+  background: $main-color;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  @include transition(background);
+
+  &:hover {
+    background: darken($main-color, 8%);
+  }
+}
+
+

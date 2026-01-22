@@ -1,0 +1,31 @@
+.features {
+  @extend %section-padding;
+
+  &__list {
+    display: grid;
+    gap: 30px;
+
+    @include media-min($bp-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-min($bp-desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    &-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      color: $light-gray;
+      font-size: 14px;
+    }
+  }
+}

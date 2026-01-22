@@ -1,0 +1,38 @@
+:root {
+  --main-color: #2196f3;
+  --dark-color: #212121;
+  --light-gray: #757575;
+  --white: #ffffff;
+  --dark-bg: #2f303a;
+  --section-bg: #f5f4fa;
+  --section-padding: 94px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--dark-color);
+  background: var(--white);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+

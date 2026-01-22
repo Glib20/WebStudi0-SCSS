@@ -1,0 +1,55 @@
+.header {
+  border-bottom: 1px solid #ececec;
+  padding: 24px 0;
+
+  &__container {
+    @include flex-center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  font-family: $font-logo;
+  font-size: 24px;
+  font-weight: 700;
+  color: $main-color;
+
+  &__accent {
+    color: #000;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__link {
+    position: relative;
+    color: $dark-color;
+    font-weight: 500;
+    @include transition(color);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: $main-color;
+      @include transition(width);
+    }
+
+    &:hover,
+    &--active {
+      color: $main-color;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.hero {
+  background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),
+    url("../img/hero.jpg") center / cover;
+  text-align: center;
+  color: $white;
+  padding: 120px 0;
+
+  &__title {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 32px;
+
+    @include media-min($bp-desktop) {
+      font-size: 44px;
+    }
+  }
+
+  &__btn {
+    @extend %button;
+    padding: 14px 32px;
+  }
+}

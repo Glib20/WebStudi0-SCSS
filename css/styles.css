@@ -1,0 +1,252 @@
+/* ------------------------ Root ------------------------ */
+:root {
+  --color-gray: #757575;
+  --color-dgray: #212121;
+  --color-lgray: #ececec;
+  --color-black: #000;
+  --color-blue: #2196f3;
+  --color-white: #fff;
+  --color-fon: #2f302f;
+
+  --timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 250ms;
+}
+
+/* ------------------------ Base ------------------------ */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: var(--color-dgray);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ------------------------ Header ------------------------ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.header-logo,
+.footer-logo {
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--color-black);
+}
+
+.header-logo-span,
+.footer-logo-span {
+  color: var(--color-blue);
+}
+
+/* ----- Navigation ----- */
+.header-nav {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-nav-link {
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-dgray);
+  padding-bottom: 4px;
+
+  transition: color var(--duration) var(--timing);
+}
+
+.header-nav-link:hover,
+.header-nav-link:focus {
+  color: var(--color-blue);
+}
+
+/* active page */
+.header-nav-link.current {
+  color: var(--color-blue);
+}
+
+.header-nav-link.current::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-blue);
+  border-radius: 2px;
+
+  transition: background-color var(--duration) var(--timing);
+}
+
+/* ----- Contacts ----- */
+.header-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.header-contacts a {
+  text-decoration: none;
+  color: var(--color-gray);
+
+  transition: color var(--duration) var(--timing);
+}
+
+.header-contacts a:hover,
+.header-contacts a:focus {
+  color: var(--color-blue);
+}
+
+/* ------------------------ Portfolio Filters ------------------------ */
+.portfolio-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.portfolio-filters-button {
+  padding: 10px 24px;
+  background-color: #f5f4fa;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--color-dgray);
+
+  transition:
+    background-color var(--duration) var(--timing),
+    color var(--duration) var(--timing),
+    box-shadow var(--duration) var(--timing);
+}
+
+.portfolio-filters-button:hover,
+.portfolio-filters-button:focus {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-filters-button.active {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ------------------------ Gallery ------------------------ */
+.portfolio-gallery-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-gallery-item {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  transition:
+    box-shadow var(--duration) var(--timing),
+    border-color var(--duration) var(--timing);
+}
+
+.portfolio-gallery-item:hover,
+.portfolio-gallery-item:focus-within {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  border-color: #ddd;
+}
+
+/* image */
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  transition: transform var(--duration) var(--timing);
+}
+
+.portfolio-gallery-item:hover .portfolio-gallery-img,
+.portfolio-gallery-item:focus-within .portfolio-gallery-img {
+  transform: scale(1.05);
+}
+
+/* overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--color-white);
+  padding: 20px;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+
+  transform: translateY(100%);
+  transition: transform var(--duration) var(--timing);
+}
+
+.portfolio-gallery-item:hover .overlay,
+.portfolio-gallery-item:focus-within .overlay {
+  transform: translateY(0);
+}
+
+.portfolio-gallery-title {
+  font-size: 18px;
+  padding: 10px 16px 0;
+}
+
+.portfolio-gallery-text {
+  font-size: 14px;
+  color: var(--color-gray);
+  padding: 0 16px 10px;
+}
+
+/* ------------------------ Footer ------------------------ */
+footer {
+  background-color: var(--color-fon);
+  color: var(--color-white);
+  padding: 40px 20px;
+}
+
+.footer-logo {
+  color: var(--color-white);
+}
+
+.footer-address-text {
+  color: var(--color-white);
+  font-style: normal;
+  margin-bottom: 8px;
+}

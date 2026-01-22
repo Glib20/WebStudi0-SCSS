@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet" />
+  <title>WebStudio</title>
+</head>
+<body class="body">
+  <div class="container">
+  <header class="header">
+    <a class="header-logo">Web<span class="header-logo-span">Studio</span></a>
+
+     <nav>
+        <ul class="nav-list">
+          <li><a href="./home.html" class="active">Студія</a></li>
+          <li><a href="./index.html">Портфоліо</a></li>
+          <li><a href="#">Контакти</a></li>
+        </ul>
+      </nav>
+
+    <div class="header-contacts">
+      <a class="header-contacts-email" href="mailto:info@devstudio.com">info@devstudio.com</a>
+      <a class="header-contacts-phone" href="tel:+380961111111">+38 096 111 11 11</a>
+    </div>
+  </header>
+
+  <main class="portfolio">
+    <h2 class="portfolio-title">Категорії</h2>
+    <div class="portfolio-filters">
+      <button class="portfolio-filters-button">Усі</button>
+      <button class="portfolio-filters-button">Веб-сайти</button>
+      <button class="portfolio-filters-button">Додатки</button>
+      <button class="portfolio-filters-button">Дизайн</button>
+      <button class="portfolio-filters-button">Маркетинг</button>
+    </div>
+
+    <section class="portfolio-gallery">
+      <ul class="portfolio-gallery-list">
+
+        <!-- 1 карточка с оверлеем -->
+        <li class="portfolio-gallery-item">
+          <div class="portfolio-thumb">
+            <img class="portfolio-gallery-img" src="https://bitovki.webcom.in.ua/images/tehnokryck.jpg" alt="Технокряк" />
+            <div class="overlay">
+              <p>
+                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+          </div>
+          <h3 class="portfolio-gallery-title">Технокряк</h3>
+          <p class="portfolio-gallery-text">Веб-сайт</p>
+        </li>
+
+        <!-- Остальные без оверлея -->
+        <li class="portfolio-gallery-item">
+          <div class="portfolio-thumb">
+            <img class="portfolio-gallery-img" src="https://bitovki.webcom.in.ua/images/novsgs.jpg" alt="Постер" />
+          </div>
+          <h3 class="portfolio-gallery-title">Постер New Orlean vs Golden Star</h3>
+          <p class="portfolio-gallery-text">Дизайн</p>
+        </li>
+
+        <li class="portfolio-gallery-item">
+          <div class="portfolio-thumb">
+            <img class="portfolio-gallery-img" src="https://bitovki.webcom.in.ua/images/seafood.jpg" alt="Seafood" />
+          </div>
+          <h3 class="portfolio-gallery-title">Ресторан Seafood</h3>
+          <p class="portfolio-gallery-text">Додаток</p>
+        </li>
+
+        <li class="portfolio-gallery-item">
+          <div class="portfolio-thumb">
+            <img class="portfolio-gallery-img" src="https://bitovki.webcom.in.ua/images/prime.jpg" alt="Prime" />
+          </div>
+          <h3 class="portfolio-gallery-title">Проєкт Prime</h3>
+          <p class="portfolio-gallery-text">Маркетинг</p>
+        </li>
+
+        <li class="portfolio-gallery-item">
+          <div class="portfolio-thumb">
+            <img class="portfolio-gallery-img" src="https://bitovki.webcom.in.ua/images/boxes.jpg" alt="Boxes" />
+          </div>
+          <h3 class="portfolio-gallery-title">Проєкт Boxes</h3>
+          <p class="portfolio-gallery-text">Додаток</p>
+        </li>
+
+        <li class="portfolio-gallery-item">
+          <div class="portfolio-thumb">
+            <img class="portfolio-gallery-img" src="https://bitovki.webcom.in.ua/images/inspiration.jpg" alt="Inspiration" />
+          </div>
+          <h3 class="portfolio-gallery-title">Inspiration has no Borders</h3>
+          <p class="portfolio-gallery-text">Веб-сайт</p>
+        </li>
+
+        <li class="portfolio-gallery-item">
+          <div class="portfolio-thumb">
+            <img class="portfolio-gallery-img" src="https://bitovki.webcom.in.ua/images/limed.jpg" alt="Limited Edition" />
+          </div>
+          <h3 class="portfolio-gallery-title">Видання Limited Edition</h3>
+          <p class="portfolio-gallery-text">Дизайн</p>
+        </li>
+
+        <li class="portfolio-gallery-item">
+          <div class="portfolio-thumb">
+            <img class="portfolio-gallery-img" src="https://bitovki.webcom.in.ua/images/lab.jpg" alt="LAB" />
+          </div>
+          <h3 class="portfolio-gallery-title">Проєкт LAB</h3>
+          <p class="portfolio-gallery-text">Маркетинг</p>
+        </li>
+
+        <li class="portfolio-gallery-item">
+          <div class="portfolio-thumb">
+            <img class="portfolio-gallery-img" src="https://bitovki.webcom.in.ua/images/growing.jpg" alt="Growing Business" />
+          </div>
+          <h3 class="portfolio-gallery-title">Growing Business</h3>
+          <p class="portfolio-gallery-text">Додаток</p>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <p class="footer-logo">Web<span class="footer-logo-span">Studio</span></p>
+    <address class="footer-address">
+      <p class="footer-address-text">м. Київ, пр-т Лесі Українки, 26</p>
+      <p class="footer-address-text">info@devstudio.com</p>
+      <p class="footer-address-text">+38 096 111 11 11</p>
+    </address>
+  </footer>
+
+</body>
+</html>

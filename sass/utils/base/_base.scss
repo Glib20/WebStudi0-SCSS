@@ -1,0 +1,12 @@
+body {
+  font-family: $font-main;
+  color: $dark-color;
+  background: $white;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

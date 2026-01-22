@@ -1,0 +1,23 @@
+.team {
+  @extend %section-padding;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__card {
+    background: $white;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    @include transition(transform);
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
